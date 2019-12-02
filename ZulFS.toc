@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: ZulFS
+## Notes: ZulFS
+## Version: 1.1.3
+
+ZulFS.lua
+ZulFS.xml
