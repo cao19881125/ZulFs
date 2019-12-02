@@ -115,7 +115,15 @@ local function EnableZulFS()
     disabled = false
     RegisterEvent('PLAYER_REGEN_DISABLED', StartCombat)
     RegisterEvent('PLAYER_REGEN_ENABLED', StopCombat)
-    ZFrm:SetScript('OnUpdate', ResizeMark)
+
+    local in_combat = InCombatLockdown()
+
+    if(in_combat)then
+        StartCombat()
+    else
+        ZFrm:SetScript('OnUpdate', ResizeMark)
+    end
+
 end
 
 local function DisableZulFS()
